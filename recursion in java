@@ -17,4 +17,20 @@ public class Methods{
     }
 }
 // a function calling itself in a function is called recursion
+public class Main {
+  public static void main(String[] args) {
+    int result = sum(10);
+    System.out.println(result);
+  }
+//   base case
+  public static int sum(int k) {
+    if (k > 0) {
+      return k + sum(k - 1);
+    } 
+    //recursive case 
+    else {
+      return 0;
+    }
+  }
+}
   
