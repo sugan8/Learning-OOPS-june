@@ -1,0 +1,20 @@
+public class Methods{
+    public static void main (String args[]){
+        natPrint(10);
+    }
+    public static void natPrint(int n){
+        // base case
+        // stopping point prevents function calling itself forever
+        if(n==1){
+            System.out.println(1);
+        }
+        // recursive case
+        // a call itself to solve a small peice of problem
+        else{
+            System.out.println(n);
+            natPrint(n-1);
+        }
+    }
+}
+// a function calling itself in a function is called recursion
+  
