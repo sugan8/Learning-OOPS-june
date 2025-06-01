@@ -1,0 +1,17 @@
+public class Book{
+    String title;
+    String author;
+    double price;
+    
+public Book(){
+    title="sss";
+    author ="s";
+    price=39.23;
+}
+public static void main (String args[]){
+    Book b=new Book();
+    System.out.println(b.title);
+    System.out.println(b.author);
+    System.out.println(b.price);
+}
+}
