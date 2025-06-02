@@ -1,0 +1,21 @@
+abstract class Vehicle{
+   abstract void speed();
+   void brand()
+    {
+        System.out.println("the speed is 25km phr");
+    }
+}
+class bike extends Vehicle{
+    void speed ()
+    {
+        System.out.println("the speed is 233km phr");
+    }
+}
+class car extends Vehicle{
+    void speed(){
+}
+}
+public class Main{
+    public static void main(String args[]){
+    }
+}
