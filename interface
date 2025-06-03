@@ -17,3 +17,28 @@ public class Main {
         myPig.sleep();
     }
 }
+----------------------------------------------------
+//sample code for multiple interface
+interface Animal {
+    void animalSound();  // Method names should follow camelCase
+}
+interface Animal2{
+    void animalcolour();
+}
+class Pig implements Animal, Animal2{
+    public void animalSound() {
+        System.out.println("This pig says: wee wee");
+    }
+    public void animalcolour() {
+        System.out.println("Zzz");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Pig myPig = new Pig();
+        myPig.animalSound();
+        myPig.animalcolour();
+    }
+}
+
+
