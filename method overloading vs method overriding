@@ -1,0 +1,49 @@
+//method overloading
+public class Main {
+  static int plusMethodInt(int x, int y) {
+    return x + y;
+  }
+  static double plusMethodDouble(double x, double y) {
+    return x + y;
+  } 
+  public static void main(String[] args) {
+    int myNum1 = plusMethodInt(8, 5);
+    double myNum2 = plusMethodDouble(4.3, 6.26);
+    System.out.println("int: " + myNum1);
+    System.out.println("double: " + myNum2);
+  }
+}
+//method overriding
+// Base class
+class Calculator {
+    int calculate(int x, int y) {
+        return x + y;
+    }
+    double calculate(double x, double y) {
+        return x + y;
+    }
+}
+// Subclass overrides the methods
+class AdvancedCalculator extends Calculator {
+    @Override
+    int calculate(int x, int y) {
+        System.out.println("Overriding int calculation");
+        return x + y + 1; // Example of a modified result
+    }
+    @Override
+    double calculate(double x, double y) {
+        System.out.println("Overriding double calculation");
+        return x + y + 1.0; // Example of a modified result
+    }
+}
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Calculator myCalc = new AdvancedCalculator();  // Polymorphism
+        int myNum1 = myCalc.calculate(8, 5);           // Calls overridden method
+        double myNum2 = myCalc.calculate(4.3, 6.26);   // Calls overridden method
+
+        System.out.println("int: " + myNum1);
+        System.out.println("double: " + myNum2);
+    }
+}
